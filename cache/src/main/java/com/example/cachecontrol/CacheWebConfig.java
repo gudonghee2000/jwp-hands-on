@@ -9,5 +9,7 @@ public class CacheWebConfig implements WebMvcConfigurer {
 
     @Override
     public void addInterceptors(final InterceptorRegistry registry) {
+        CacheInterceptor cacheInterceptor = new CacheInterceptor();
+        registry.addInterceptor(cacheInterceptor);
     }
 }
