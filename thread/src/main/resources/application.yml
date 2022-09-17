@@ -1,6 +1,12 @@
 server:
   tomcat:
-    accept-count: 10
-    max-connections: 8
+    accept-count: 2
+    max-connections: 3
     threads:
-      max: 15
+      max: 3
+
+spring:
+  mvc:
+    view:
+      prefix: /WEB-INF/views/
+      suffix: .jsp
