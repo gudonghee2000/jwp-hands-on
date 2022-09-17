@@ -17,7 +17,7 @@ public class KoreanServlet extends HttpServlet {
     @Override
     public void init(final ServletConfig config) throws ServletException {
         super.init(config);
-        getServletContext().log("init() 호출");
+        getServletContext().log("korea: init() 호출");
     }
 
     @Override

@@ -32,22 +32,26 @@ public class SharedCounterServlet extends HttpServlet {
      */
     private Integer sharedCounter;
 
+    public SharedCounterServlet() {
+        System.out.println("쉐어드 서블릿 생성~");
+    }
+
     @Override
     public void init(final ServletConfig config) throws ServletException {
         super.init(config);
-        getServletContext().log("shared: init() 호출");
+        getServletContext().log("쉐어드 서블릿: init() 호출");
         sharedCounter = 0;
     }
 
     @Override
     protected void service(final HttpServletRequest request, final HttpServletResponse response) throws IOException {
-        getServletContext().log("shared: service() 호출");
+        getServletContext().log("쉐어드 서블릿: service() 호출");
         sharedCounter++;
         response.getWriter().write(String.valueOf(sharedCounter));
     }
 
     @Override
     public void destroy() {
-        getServletContext().log("shared: destroy() 호출");
+        getServletContext().log("쉐어드 서블릿: destroy() 호출");
     }
 }
